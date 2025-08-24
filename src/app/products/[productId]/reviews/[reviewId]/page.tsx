@@ -1,4 +1,5 @@
 import React from "react";
+import { notFound } from "next/navigation";
 
 const SingleReviewPage = async ({
   params,
@@ -6,6 +7,9 @@ const SingleReviewPage = async ({
   params: Promise<{ productId: string; reviewId: string }>;
 }) => {
   const { productId, reviewId } = await params;
+    if (parseInt(productId) > 20 || parseInt(reviewId) > 20) {
+        notFound();
+    }
   return (
     <div>
       <h2>

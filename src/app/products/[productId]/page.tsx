@@ -7,9 +7,14 @@ type TProps = {
 
 export const generateMetadata = async (props: TProps): Promise<Metadata> => {
   const id = (await props.params).productId;
+  const title = await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`iPhone ${id}`);
+    }, 1000);
+  });
   return {
-    title: `Product ${id}`,
-    description: `This is the page for product ${id}`,
+    title: `${title}`,
+    description: `This is the page for ${title}`,
   };
 };
 

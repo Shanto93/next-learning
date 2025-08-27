@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Authentication Layout",
+  title: {
+    default: "Authentication",
+    template: "%s | Auth",
+  },
   description: "Layout for authentication pages",
 };
 
-export default function RootLayout({
+export default function AuthenticationLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

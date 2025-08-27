@@ -1,5 +1,10 @@
 import React from "react";
 
+export const metadata = {
+  title: "Register",
+  description: "This is the register page",
+};
+
 const Regster = () => {
   return (
     <div>

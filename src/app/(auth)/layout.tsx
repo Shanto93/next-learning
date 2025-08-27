@@ -15,11 +15,7 @@ export default function AuthenticationLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
-        <p>Header</p>
-        {children}
-        <p>Footer</p>
-      </body>
+      <body className="">{children}</body>
     </html>
   );
 }

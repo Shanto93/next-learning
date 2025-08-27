@@ -1,9 +1,9 @@
-import React from 'react';
-
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to Home</h1>
+    <div className="m-4 h-screen">
+      <div className="flex justify-center items-center h-full">
+        <h1 className="">Welcome to Home</h1>
+      </div>
     </div>
   );
 };

@@ -1,12 +1,9 @@
-import Notifications from "./@notifications/page";
-import RevenueMetrics from "./@revenue/page";
-import UserAnalytics from "./@userAnalytics/page";
-
 interface DashboardLayoutProps {
   children: React.ReactNode;
   notifications?: React.ReactNode;
   userAnalytics?: React.ReactNode;
   revenue?: React.ReactNode;
+  login?: React.ReactNode;
 }
 
 const ComplexDashboardLayout = ({
@@ -14,8 +11,11 @@ const ComplexDashboardLayout = ({
   notifications,
   userAnalytics,
   revenue,
+  login,
 }: DashboardLayoutProps) => {
-  return (
+  const isLogin = true;
+
+  return isLogin ? (
     <div className="min-h-screen bg-gray-50">
       {/* Main content area */}
       <div className="p-4">{children}</div>
@@ -49,6 +49,8 @@ const ComplexDashboardLayout = ({
         </aside>
       </main>
     </div>
+  ) : (
+    <div>{login}</div>
   );
 };
 
